@@ -2,9 +2,13 @@
   "users": [
     {{#repeat 5}}
     {
-      "id": "{{@index}}",
+      "id": "{{add @index 1}}",
+      "login_id": "{{firstName}}",
       "name": "{{firstName}} {{lastName}}",
-      "email": "{{email}}"
+      "email": "{{email}}",
+      "created_at": "{{date '2015-06-01T09:00Z' '2015-06-30T17:30Z' 'YYYY-MM-DDThh:mm:ssZ'}}",
+      "updated_at": "{{date '2016-06-01T09:00Z' '2016-06-30T17:30Z' 'YYYY-MM-DDThh:mm:ssZ'}}",
+      "deleted_at": "{{date '2017-06-01T09:00Z' '2017-06-30T17:30Z' 'YYYY-MM-DDThh:mm:ssZ'}}"
     }
     {{/repeat}}
   ]
